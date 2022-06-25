@@ -1,7 +1,7 @@
 ﻿using ConsoleTransaction_Sample.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleTransaction_Sample.Context
+namespace ConsoleTransaction_Sample.Data
 {
     public class SchoolContext : DbContext
     {
@@ -10,7 +10,7 @@ namespace ConsoleTransaction_Sample.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=SchoolDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;");
         }
     }
 }
